@@ -1,0 +1,1 @@
+export { default as Stadisticas } from './Stadisticas';

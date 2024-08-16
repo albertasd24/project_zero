@@ -1,0 +1,30 @@
+.stadisticas {
+  width: 50%;
+}
+.rdt_Table{
+    border: none;
+    border-radius: 20px;
+}
+/* Estilo para la fila del encabezado */
+.rdt_TableHeadRow {
+  background-color: #4caf50;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Poppins", Inter, system-ui, sans-serif;
+}
+
+/* Estilo para las filas expandibles */
+.rdt_ExpanderRow {
+  background-color: #1ae72b;
+}
+.rdt_TableCell{
+    background-color: rgb(241, 247, 252);
+    font-family: "Poppins", Inter, system-ui, sans-serif;
+  font-size: 1rem;
+
+    /* border: 1px solid green; */
+}
+.rdt_TableCol{
+    background-color: purple;
+}
