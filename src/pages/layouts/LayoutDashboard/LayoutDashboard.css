@@ -1,0 +1,8 @@
+.layout__dashboard {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 20% 1fr;
+    background-color: rgb(217, 225, 231);
+}
+

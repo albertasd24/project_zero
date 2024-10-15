@@ -4,8 +4,10 @@ import './Stadisticas.css';
 import 'chart.js/auto'; // Asegúrate de incluir esto para cargar los elementos necesarios de Chart.js
 import DataTable from 'react-data-table-component';
 import { useEffect, useState } from 'react';
+import { createParkingMasiveService } from '../../services/api/parkingsService';
 
 const Stadisticas = () => {
+	const [fileUpload, setfileUpload] = useState(null)
 	const dataPeoples = [
 		{
 			name: 'Juan',
@@ -236,6 +238,21 @@ const Stadisticas = () => {
 		console.log('Delete', row);
 		// Agrega tu lógica de eliminación aquí
 	};
+
+	const onChangeFile = (e) => {
+		// Agrega tu lógica de carga de archivo aquí
+        console.log('Cargando archivo...')
+        const file = e.target.files[0];
+		setfileUpload(file)
+        if (!file){
+            console.log('No se ha seleccionado un archivo');
+        }
+	}
+
+	const sendForm = () => {
+		// Agrega tu lógica de envío de formulario aquí
+		createParkingMasiveService({file: fileUpload})
+	}
 	return (
 		<div className='stadisticas'>
 			<h2>Stadisticas Works!</h2>
@@ -256,6 +273,11 @@ const Stadisticas = () => {
 				<input type="text" value={searcher} onChange={changeValueSearcher} />
 			</form>
 			<DataTable columns={columns} data={dataFilter} pagination paginationComponentOptions={paginationComponentOptions} selectableRows={true} />
+
+			<form action="">
+				<input type="file" onChange={onChangeFile}/>
+				<button type='button' onClick={sendForm}>pp</button>
+			</form>
 		</div>
 	);
 };

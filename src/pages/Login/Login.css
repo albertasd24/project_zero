@@ -6,7 +6,7 @@
 }
 
 .login h1 {
-  color: var(--color-purple);
+  color: var(--color-primary);
   font-size: 2rem;
 }
 
@@ -66,8 +66,10 @@
 
 .form__helps a,
 .forgetPassword {
-  color: #838383;
   font-weight: 500;
+}
+.forgetPassword {
+  color: #838383;
 }
 
 .form__button {
@@ -89,11 +91,27 @@
   background-color: var(--color-gray);
 }
 
+@media screen and (min-width: 300px) and (max-width: 480px) {
+  .blob-top{
+    top: -6rem;
+    left: -8rem;
+  }
+  .blob-bottom {
+    bottom: -8rem;
+    right: -9rem;
+  }
+  .circle{
+    width: 70px;
+    height: 70px;
+  }
+}
+
 /* Estilos para iPads, tabletas (481px - 768px) */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .login h1 {
     font-size: 2.5rem;
   }
+
   .form input {
     padding: 13px 10px;
     font-size: 1.5rem;
@@ -109,17 +127,21 @@
   .login h1 {
     font-size: 2.5rem;
   }
+
   .form input {
     padding: 13px 10px;
     font-size: 1.5rem;
   }
+
   .form__helps a,
   .forgetPassword {
     font-size: 1.4rem;
   }
+
   .forgetPassword input {
     transform: scale(1.7);
   }
+
   .form__helps {
     padding: 0 10px;
   }
@@ -130,19 +152,20 @@
   .login h1 {
     font-size: 2.5rem;
   }
+
   .login {
     display: grid;
     grid-template-columns: repeat(2, 50%);
   }
+
   .login__banner {
-    background: linear-gradient(
-        rgba(129, 50, 140, 0.623),
-        rgba(129, 50, 140, 0.623)
-      ),
+    background: linear-gradient(rgba(129, 50, 140, 0.623),
+        rgba(129, 50, 140, 0.623)),
       url("../../assets/img/banner_login.jpg") no-repeat;
     background-size: cover;
     display: block;
   }
+
   .form__helps {
     padding: 0 10px;
   }
@@ -153,19 +176,20 @@
   .login h1 {
     font-size: 2.5rem;
   }
+
   .login {
     display: grid;
     grid-template-columns: repeat(2, 50%);
   }
+
   .login__banner {
-    background: linear-gradient(
-        rgba(129, 50, 140, 0.623),
-        rgba(129, 50, 140, 0.623)
-      ),
+    background: linear-gradient(rgba(129, 50, 140, 0.623),
+        rgba(129, 50, 140, 0.623)),
       url("../../assets/img/banner_login.jpg") no-repeat;
     background-size: cover;
     display: block;
   }
+
   .form__helps {
     padding: 0 10px;
   }

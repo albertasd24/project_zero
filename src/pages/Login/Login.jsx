@@ -11,11 +11,11 @@ const Login = () => {
 				<div className="form">
 					<div className='form__email'>
 						<label htmlFor='email'>Correo: </label>
-						<input type='email' id='email' placeholder='example@gameil.com' />
+						<input type='email' id='email' placeholder='example@gmail.com' />
 					</div>
 					<div className='form__password'>
 						<label htmlFor='password'>Contraseña: </label>
-						<input type='password' id='password' placeholder='***********' />
+						<input type='password' autoComplete='' id='password' placeholder='Contraseña' />
 					</div>
 					<div className="form__helps">
 						<div className="forgetPassword">
