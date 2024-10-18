@@ -1,6 +1,11 @@
 import './Login.css';
 
 const Login = () => {
+	const code = `<ul>
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+	</ul>`;
 	return (
 		<div className='login'>
 			<form className='login__form'>
@@ -8,6 +13,8 @@ const Login = () => {
 				<div className="blob-bottom"></div>
 				<div className='circle'></div>
 				<h1>Iniciar Sesión</h1>
+				<div dangerouslySetInnerHTML={{ __html: code }} />
+				<img src="https://mega.nz/file/67JH2SYQ#aB9AajH5s5P6YbMdW65kVqKkYPMaEtQwlc8iMOwEtQs" alt="" />
 				<div className="form">
 					<div className='form__email'>
 						<label htmlFor='email'>Correo: </label>
